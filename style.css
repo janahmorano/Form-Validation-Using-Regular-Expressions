@@ -1,0 +1,195 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-image: url('https://storage.googleapis.com/pr-newsroom-wp/1/2019/09/Reduced_Repeat_Rewind_PR_ASSET_1921.gif');
+  background-size: cover;
+ /* backdrop-filter:  blur(5px); */
+  background-position: center;
+  background-attachment: fixed;
+  height: 100%;
+  padding:0;
+  margin:0;
+}
+.container {
+  position: relative;
+  color: white;
+  width: 90vw;
+  max-width: 600px;
+  padding: 2em 1.5em;
+  background-color: rgba(0, 0, 0, 0.747);
+  margin: 1em auto;
+  border-radius: 0.5em;
+}
+h2 {
+  font-size: 2em;
+  text-align: center;
+  color: rgb(250, 250, 250); 
+}
+.input-section {
+  margin: 0.5em 0;
+}
+label{
+  display: block;
+  font-size: 1em;
+}
+.error-message {
+  display: block;
+  font-size: 0.8em;
+  font-weight: 800;
+  margin-top: 0.2em;
+}
+label {
+  margin-bottom: 0.5em;
+  font-weight: 500;
+}
+.pass-box {
+  position: relative; 
+  display: block;
+  outline: none; 
+  width: 100%;
+  padding: 0.1em;
+}
+input {
+  display: block;
+  outline: none;
+  width: 100%;
+  padding: 0.5em;
+  border-radius: 0.3em;
+}
+input {
+  padding: 1em 0.5em;
+  border: 1.5px solid #d0d0d0;
+}
+button {
+  font-size: 1em;
+  font-weight: 500;
+  display: block;
+  outline: none;
+  width: 100%;
+  border-radius: 0.3em;
+  background-image: url('https://uploads-ssl.webflow.com/5a9ee6416e90d20001b20038/62ee0cbd7fea4eaf69021683_Rectangle%201%20-%202022-08-06T093955.117.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  color: #ffffff;
+  padding: 0.8em 0;
+  margin-top: 2em;
+}
+.fa-eye {
+  position: absolute;
+  padding-top: 1em;
+  left: 90%;
+  cursor: pointer;
+  color: lightgrey;
+}
+.password-requirements {
+  font-size: 0.8em;
+  font-weight: 800;
+  position: relative;
+  top: 0em;
+  left: 25%;
+  transform: translateX(-50%);
+  width: 50%;
+  padding: 0em;
+  height: 0em; 
+  background: #ffffff00;
+  border-radius: 0.5em;
+  margin-top: 0em;
+  box-sizing: border-box;
+  opacity: 1;
+  overflow: hidden;
+  transition: height 300ms ease-in-out, opacity 300 ms ease-in-out; 
+}
+.password-requirements.active{
+  opacity: 1;
+  padding: 1em;
+  height: 11em;
+  box-sizing: content-box;
+}
+.password-requirements > div {
+  margin-left: 0.5em;
+  color: #ff4747;
+}
+.password-requirements > div.active {
+  margin-left: 0.5em;
+  color:#37a137;
+}
+.indicator{
+	height: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 10px 0;
+	display: none;
+}
+.indicator span{
+	width: 100%;
+	height: 100%;
+	background: lightgrey;
+	border-radius: 5px;
+	position: relative;
+}
+.indicator span.medium{
+	margin: 0 3px;
+}
+.indicator span:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+}
+.indicator span.active.weak:before{
+	background: #ff4757;
+}
+
+.indicator span.active.medium:before{
+	background: orange;
+}
+
+.indicator span.active.strong:before{
+	background: #23ad5c;
+}
+.text{
+	font-size: 0.8em;
+	font-weight: 500;
+	margin-bottom: -10px;
+	display: none;
+}
+.text.weak{
+  text-align: center;
+	color: #ff4757;
+}
+.text.medium{
+  text-align: center;
+	color: orange;
+}
+.text.strong{
+  text-align: center;
+	color: #23ad5c;
+}
+.required-color {
+  color: #ff4747;
+}
+.error {
+  border-color: #ff4747;
+  border-width: .2em;
+}
+.valid {
+  border-color: #23e923;
+  border-width: .2em;
+}
+.hide {
+  display: none;
+}
+@media only screen and (max-width: 450px) {
+  .container {
+    font-size: 14px;
+  }
+}

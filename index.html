@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Account Form Validation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2091/2091363.png" type="image/icon type">
+    <!-- Google Fonts https://buffer.com/library/content/images/library/wp-content/uploads/2016/06/giphy.gif--> 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form autocomplete="off">
+        <h2>CREATE ACCOUNT</h2>
+        <div class="input-section">
+          <label>First Name <span class="required-color">*</span></label>
+          <input
+            type="text"
+            placeholder="Enter First Name"
+            id="first-name-input"
+            required
+          />
+          <span id="first-name-error" class="hide required-color error-message"
+            >Invalid Input</span
+          >
+          <span id="empty-first-name" class="hide required-color error-message"
+            >First Name cannot be empty</span
+          >
+        </div>
+        
+        <div class="input-section">
+          <label>Last Name <span class="required-color">*</span></label>
+          <input
+            type="text "
+            placeholder="Enter Last Name"
+            id="last-name-input"
+            required
+          />
+          <span id="last-name-error" class="hide required-color error-message"
+            >Invalid Input</span
+          >
+          <span id="empty-last-name" class="hide required-color error-message">
+            Last Name cannot be empty
+          </span>
+        </div>
+
+        <div class="input-section">
+          <label>Birthday <span class="required-color">*</span></label>
+          <input
+            type="text"
+            placeholder="mm/dd/yyyy"
+            id="birthday"
+            required
+          />
+          <span id="birthday-error" class="hide required-color error-message"
+            >Invalid Format </span>
+          <span id="age-error" class="hide required-color error-message"
+            >You must be over age 18 to signup</span>
+          <span id="empty-birthday" class="hide required-color error-message">
+            Birthday cannot be empty
+          </span>
+        </div>
+
+        <div class="input-section">
+          <label>Email <span class="required-color">*</span></label>
+          <input type="email" placeholder="Enter Email" id="email" required />
+          <span id="email-error" class="hide required-color error-message"
+            >Invalid Email</span>
+          <span id="empty-email" class="hide required-color error-message"
+            >Email cannot be empty</span>
+        </div>
+
+        <div class="input-section">
+          <label>Phone <span class="required-color">*</span></label>
+          <input
+            type="text"
+            placeholder="Enter Phone Number"
+            id="phone"
+            required
+          />
+          <span id="phone-error" class="hide required-color error-message"
+            >Phone number should start at <b>09</b> or <b>+639</b> followed by 9 digit numbers</span>
+          <span id="empty-phone" class="hide required-color error-message">
+            Phone number cannot be empty
+          </span>
+        </div>
+
+        <div class="input-section">
+          <label>Password <span class="required-color">*</span></label>
+          <i class="fa-solid fa-eye" id="show-password"> </i>
+          <input
+            onkeyup="trigger()"
+            type="password"
+            placeholder="Enter Password"
+            id="password"
+            required
+          />
+          <div class="pass-box"></div>
+          <div class="password-requirements">
+             Password should contain: 
+            <div class="password-uppercase">
+              ● uppercase letter 
+            </div>
+           <div class="password-lowercase" >
+              ● lowercase letter 
+          </div>
+            <div class="password-number">
+              ● number 
+            </div>
+            <div class="password-char">
+              ● special character 
+            </div>
+            <div class="password-length">
+              ● at least 8 characters in length 
+            </div>
+            <div class="password-data">
+              ● no user data (name & birthday)
+            </div>
+          </div>
+            
+          <span id="empty-password" class="hide required-color error-message">
+            Password cannot be empty
+          </span>
+        </div>
+
+        <div class="indicator">
+          <span class="weak"></span>
+          <span class="medium"></span>
+          <span class="strong"></span>
+        </div>
+         
+        <div class="text"></div>
+
+        <div class="input-section">
+          <label>Confirm Password <span class="required-color">*</span></label>
+          <i class="fa-solid fa-eye" id="show-vpassword"> </i>
+          <input
+            type="password"
+            id="verify-password"
+            placeholder="Confirm Password"
+            required
+          />
+          <span
+            id="verify-password-error"
+            class="hide required-color error-message"
+            >Should be same as previous password</span
+          >
+          <span
+            id="empty-verify-password"
+            class="hide required-color error-message"
+            >Password cannot be empty</span
+          >
+        </div>
+
+        <button id="submit-button"><big>Signup</big></button>
+      </form>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
